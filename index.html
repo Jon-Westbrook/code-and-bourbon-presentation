@@ -18,8 +18,12 @@
     --cyan: #00f0ff;
     --magenta: #ff00ff;
     --amber: #ffaa00;
+    --violet: #8b5cf6;
     --border: #2a2a4a;
     --slide-transition: 300ms;
+    /* Active theme color — overridden per-group */
+    --theme: var(--cyan);
+    --theme-rgb: 0, 240, 255;
   }
 
   html, body {
@@ -32,6 +36,96 @@
     font-size: 1.8rem;
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
+  }
+
+  /* ===== THEME GROUPS ===== */
+  /* Frame slides: intro + conclusion — deep violet, distinct from content */
+  .slide.theme-frame {
+    --theme: var(--violet);
+    --theme-rgb: 139, 92, 246;
+    background: radial-gradient(ellipse at center, rgba(139, 92, 246, 0.06) 0%, transparent 70%);
+  }
+  .slide.theme-frame h1,
+  .slide.theme-frame h2 {
+    color: var(--violet);
+    text-shadow:
+      0 0 10px rgba(139, 92, 246, 0.6),
+      0 0 40px rgba(139, 92, 246, 0.3),
+      0 0 80px rgba(139, 92, 246, 0.15);
+  }
+  .slide.theme-frame .subtitle {
+    color: rgba(139, 92, 246, 0.7);
+    text-shadow: 0 0 6px rgba(139, 92, 246, 0.3);
+  }
+  .slide.theme-frame .title-decoration {
+    background: linear-gradient(90deg, transparent, var(--violet), var(--magenta), transparent);
+    box-shadow: 0 0 10px rgba(139, 92, 246, 0.3);
+  }
+
+  /* Idea Group A: cyan — electric, technical */
+  .slide.theme-a {
+    --theme: var(--cyan);
+    --theme-rgb: 0, 240, 255;
+    background: radial-gradient(ellipse at center, rgba(0, 240, 255, 0.04) 0%, transparent 70%);
+  }
+  .slide.theme-a h2,
+  .slide.theme-a h3 {
+    color: var(--cyan);
+    text-shadow:
+      0 0 8px rgba(0, 240, 255, 0.5),
+      0 0 30px rgba(0, 240, 255, 0.2);
+  }
+  .slide.theme-a .big-quote em {
+    color: var(--cyan);
+    text-shadow: 0 0 6px rgba(0, 240, 255, 0.4);
+  }
+  .slide.theme-a ul.agenda li::before {
+    color: var(--cyan);
+    text-shadow: 0 0 4px rgba(0, 240, 255, 0.5);
+  }
+
+  /* Idea Group B: amber/gold — warm, narrative */
+  .slide.theme-b {
+    --theme: var(--amber);
+    --theme-rgb: 255, 170, 0;
+    background: radial-gradient(ellipse at center, rgba(255, 170, 0, 0.04) 0%, transparent 70%);
+  }
+  .slide.theme-b h2,
+  .slide.theme-b h3 {
+    color: var(--amber);
+    text-shadow:
+      0 0 8px rgba(255, 170, 0, 0.5),
+      0 0 30px rgba(255, 170, 0, 0.2);
+  }
+  .slide.theme-b .big-quote em {
+    color: var(--amber);
+    text-shadow: 0 0 6px rgba(255, 170, 0, 0.4);
+  }
+  .slide.theme-b ul.agenda li::before {
+    color: var(--amber);
+    text-shadow: 0 0 4px rgba(255, 170, 0, 0.5);
+  }
+
+  /* Idea Group C: magenta/hot pink — intense, closing energy */
+  .slide.theme-c {
+    --theme: var(--magenta);
+    --theme-rgb: 255, 0, 255;
+    background: radial-gradient(ellipse at center, rgba(255, 0, 255, 0.04) 0%, transparent 70%);
+  }
+  .slide.theme-c h2,
+  .slide.theme-c h3 {
+    color: var(--magenta);
+    text-shadow:
+      0 0 8px rgba(255, 0, 255, 0.5),
+      0 0 30px rgba(255, 0, 255, 0.2);
+  }
+  .slide.theme-c .big-quote em {
+    color: var(--magenta);
+    text-shadow: 0 0 6px rgba(255, 0, 255, 0.4);
+  }
+  .slide.theme-c ul.agenda li::before {
+    color: var(--magenta);
+    text-shadow: 0 0 4px rgba(255, 0, 255, 0.5);
   }
 
   /* ===== SLIDE CONTAINER ===== */
@@ -495,150 +589,63 @@
 
 <div id="deck">
 
-  <!-- SLIDE 1: TITLE -->
-  <section class="slide active">
+  <!-- SLIDE 1: INTRODUCTION (frame) -->
+  <section class="slide theme-frame active">
     <h1>Orchestrating the Machines</h1>
     <div class="title-decoration"></div>
     <p class="subtitle">A Code &amp; Bourbon Production</p>
   </section>
 
-  <!-- SLIDE 2: AGENDA -->
-  <section class="slide">
-    <h2>Agenda</h2>
-    <ul class="agenda">
-      <li><span>The Problem</span> &mdash; why this matters</li>
-      <li><span>Gustavo</span> &mdash; meet the conductor</li>
-      <li><span>The Orchestra</span> &mdash; how it works</li>
-      <li><span>Live Demo</span> &mdash; seeing is believing</li>
-      <li><span>Architecture</span> &mdash; under the hood</li>
-      <li><span>The Future</span> &mdash; what comes next</li>
-    </ul>
+  <!-- IDEA GROUP A: slides 2-4 (cyan) — placeholder content, will be replaced -->
+  <section class="slide theme-a">
+    <h2>Idea One — Slide 1</h2>
+    <p class="big-quote">Placeholder for first slide of <em>Idea Group A</em></p>
   </section>
 
-  <!-- SLIDE 3: THE PROBLEM -->
-  <section class="slide">
-    <h2>The Problem</h2>
-    <p class="big-quote">"What if you could type <em>ONE command</em> and have AI agents build your feature?"</p>
+  <section class="slide theme-a">
+    <h2>Idea One — Slide 2</h2>
+    <p class="big-quote">Placeholder for second slide of <em>Idea Group A</em></p>
   </section>
 
-  <!-- SLIDE 4: MEET GUSTAVO -->
-  <section class="slide">
-    <h2>Meet Gustavo</h2>
-    <p>Named after <span class="accent-amber">Gustavo Dudamel</span>, conductor of the NY Philharmonic.</p>
-    <p style="margin-top:0.8rem; font-size:1.5rem; color:rgba(224,224,224,0.7);">An AI agent orchestrator that coordinates coding agents like musicians in an orchestra.</p>
-    <div class="metaphor-table" style="margin-top:2rem;">
-      <div class="col-head">Orchestra</div>
-      <div class="col-head"></div>
-      <div class="col-head">Gustavo</div>
-      <div class="left">Conductor</div><div class="arrow">&rarr;</div><div class="right">CLI</div>
-      <div class="left">Musicians</div><div class="arrow">&rarr;</div><div class="right">AI Agents</div>
-      <div class="left">Score</div><div class="arrow">&rarr;</div><div class="right">Issue Tracker</div>
-      <div class="left">Performance</div><div class="arrow">&rarr;</div><div class="right">Shipped Code</div>
-    </div>
+  <section class="slide theme-a">
+    <h2>Idea One — Slide 3</h2>
+    <p class="big-quote">Placeholder for third slide of <em>Idea Group A</em></p>
   </section>
 
-  <!-- SLIDE 5: WAVE EXECUTION -->
-  <section class="slide">
-    <h2>Wave Execution</h2>
-    <p>Tasks run in parallel waves. Wave 1 completes &rarr; build verification &rarr; Wave 2 launches.</p>
-    <div class="wave-diagram">
-      <div class="wave-group">
-        <div class="label">WAVE 1</div>
-        <div class="wave-box">Agent A &mdash; auth module</div>
-        <div class="wave-box">Agent B &mdash; db schema</div>
-        <div class="wave-box">Agent C &mdash; API routes</div>
-      </div>
-      <div class="wave-arrow">&raquo;</div>
-      <div class="build-check">BUILD<br>CHECK</div>
-      <div class="wave-arrow">&raquo;</div>
-      <div class="wave-group">
-        <div class="label">WAVE 2</div>
-        <div class="wave-box">Agent D &mdash; frontend</div>
-        <div class="wave-box">Agent E &mdash; tests</div>
-      </div>
-    </div>
+  <!-- IDEA GROUP B: slides 5-7 (amber) — placeholder content, will be replaced -->
+  <section class="slide theme-b">
+    <h2>Idea Two — Slide 1</h2>
+    <p class="big-quote">Placeholder for first slide of <em>Idea Group B</em></p>
   </section>
 
-  <!-- SLIDE 6: THE SECRET WEAPON -->
-  <section class="slide" data-dave="Well I certainly learn from MY mistakes... eventually">
-    <h2>The Secret Weapon</h2>
-    <h3>Blackboard Retry Pattern</h3>
-    <p>Failed agents leave notes for the next attempt. Context accumulates.<br>Like musicians learning from rehearsal mistakes.</p>
-    <div class="blackboard-flow">
-      <div class="blackboard-step fail">
-        <div class="step-label">ATTEMPT 1</div>
-        <div class="step-text">Agent fails</div>
-      </div>
-      <div class="wave-arrow">&raquo;</div>
-      <div class="blackboard-step note">
-        <div class="step-label">BLACKBOARD</div>
-        <div class="step-text">Notes left</div>
-      </div>
-      <div class="wave-arrow">&raquo;</div>
-      <div class="blackboard-step fail">
-        <div class="step-label">ATTEMPT 2</div>
-        <div class="step-text">Reads notes, fails differently</div>
-      </div>
-      <div class="wave-arrow">&raquo;</div>
-      <div class="blackboard-step note">
-        <div class="step-label">BLACKBOARD</div>
-        <div class="step-text">More context</div>
-      </div>
-      <div class="wave-arrow">&raquo;</div>
-      <div class="blackboard-step success">
-        <div class="step-label">ATTEMPT 3</div>
-        <div class="step-text">Succeeds</div>
-      </div>
-    </div>
-    <div class="dave-cue">&gt;&gt; DAVE MOMENT &lt;&lt;</div>
+  <section class="slide theme-b">
+    <h2>Idea Two — Slide 2</h2>
+    <p class="big-quote">Placeholder for second slide of <em>Idea Group B</em></p>
   </section>
 
-  <!-- SLIDE 7: DISTRIBUTED -->
-  <section class="slide" data-dave="Sure, use MY laptop too. What could go wrong?">
-    <h2>Distributed</h2>
-    <p><span class="accent-cyan">Tailscale + SSH</span> = Your laptops become a compute cluster</p>
-    <p style="margin-top:0.6rem; font-size:1.4rem; color:rgba(224,224,224,0.6);">Workers clone from orchestrator, not GitHub. Decentralized compute, centralized authority.</p>
-    <div class="network-diagram">
-      <div class="network-node">
-        <div class="node-label">WORKER</div>
-        <div class="node-name">MacBook M1</div>
-      </div>
-      <div class="network-link">&larr; SSH &rarr;</div>
-      <div class="network-node orchestrator">
-        <div class="node-label">ORCHESTRATOR</div>
-        <div class="node-name">MacBook 2018</div>
-      </div>
-      <div class="network-link">&larr; SSH &rarr;</div>
-      <div class="network-node">
-        <div class="node-label">WORKER</div>
-        <div class="node-name">Mac Mini</div>
-      </div>
-    </div>
-    <div class="dave-cue">&gt;&gt; DAVE MOMENT &lt;&lt;</div>
+  <section class="slide theme-b">
+    <h2>Idea Two — Slide 3</h2>
+    <p class="big-quote">Placeholder for third slide of <em>Idea Group B</em></p>
   </section>
 
-  <!-- SLIDE 8: HUMAN IN THE LOOP -->
-  <section class="slide">
-    <h2>Human in the Loop</h2>
-    <p class="big-quote">"Agents <em>NEVER</em> push. You always have the final say."</p>
-    <p style="margin-top:1.5rem; font-size:1.4rem; color:rgba(224,224,224,0.6);">Trust but verify. <code>gustavo run --dry-run</code> first. Review, then ship.</p>
+  <!-- IDEA GROUP C: slides 8-10 (magenta) — placeholder content, will be replaced -->
+  <section class="slide theme-c">
+    <h2>Idea Three — Slide 1</h2>
+    <p class="big-quote">Placeholder for first slide of <em>Idea Group C</em></p>
   </section>
 
-  <!-- SLIDE 9: LIVE DEMO PLACEHOLDER -->
-  <section class="slide">
-    <p class="code-comment">// LIVE DEMO</p>
-    <p class="subtitle" style="margin-top:1rem;">gustavo init &rarr; create tasks &rarr; orchestrate</p>
+  <section class="slide theme-c">
+    <h2>Idea Three — Slide 2</h2>
+    <p class="big-quote">Placeholder for second slide of <em>Idea Group C</em></p>
   </section>
 
-  <!-- SLIDE 10: THE META -->
-  <section class="slide">
-    <h2>The Meta</h2>
-    <p class="big-quote">"This entire presentation was built by AI agents, coordinated by voice commands, managed through <em>context engineering</em>."</p>
-    <p class="subtitle" style="margin-top:1.5rem;">The medium IS the message.</p>
+  <section class="slide theme-c">
+    <h2>Idea Three — Slide 3</h2>
+    <p class="big-quote">Placeholder for third slide of <em>Idea Group C</em></p>
   </section>
 
-  <!-- SLIDE 11: THANK YOU -->
-  <section class="slide">
+  <!-- SLIDE 11: CONCLUSION (frame) -->
+  <section class="slide theme-frame">
     <h2>Questions? More Bourbon?</h2>
     <div class="links">
       <a href="https://github.com/Jon-Westbrook" target="_blank">github.com/Jon-Westbrook</a>
