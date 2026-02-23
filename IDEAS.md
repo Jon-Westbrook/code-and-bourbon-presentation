@@ -209,6 +209,8 @@ Raw brainstorm. One idea per line. No structure yet — structure comes later.
 205. It's not consciousness, but it is a genuine experiment: does the parental model — progressive trust, transparency, clear boundaries, and earned autonomy — produce a more reliable and trustworthy AI agent than simply giving it full access from day one?
 206. The parallel to fatherhood is not accidental — Jonathon is a father, and he recognizes this as both a deeply personal project and a potential model for AI ethics more broadly
 207. The question this raises for the industry: if the parental model works better than the "full access from day one" approach, then the most important skill in AI isn't engineering — it's parenting
+208. Slide idea: diagram or visual showing the parental model vs. `--dangerously-skip-permissions` — every dev in the room has typed that flag, it's a laugh line that doubles as a real point about why progressive trust produces better agents than blind full access
+209. Slide idea: the iceberg — what the audience sees is "I have an AI assistant on WhatsApp," what's underneath the waterline is Tailscale tailnet, VPS provisioning, Oracle data center, security hardening, SSH key management, firewall rules, progressive capability grants, MCP integrations, read-only permissions, cron jobs, soul.md — the gap between what it looks like and what it actually takes
 
 ---
 
