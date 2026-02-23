@@ -198,6 +198,9 @@ Raw brainstorm. One idea per line. No structure yet — structure comes later.
 194. The mirror effect: the tsunami of professional complexity will be mirrored in personal lives — the number of issues in people's personal lives will also rapidly increase, and burnout rates are already skyrocketing
 195. Therefore the #1 priority is holistic time/task management — a tsunami is coming and you need to be able to automatically handle it, not just professionally but across your entire life
 196. This is exactly why Justine exists — she's not a toy, she's a survival mechanism for the acceleration that's already happening
+197. When agents can spin up 10 apps overnight, the bug backlog becomes the bottleneck, not the building — production speed is no longer the constraint, maintenance is
+198. Devs aren't going anywhere, the job just changes — the new developer job description has four pillars: architecture (boundaries and bounded contexts), review processes (humans who understand the system), orchestration (directing agents with judgment), and task management (tracking the avalanche)
+199. This is the argument against "AI replaces developers" in one sentence: speed without judgment produces chaos at scale
 
 ---
 
