@@ -184,6 +184,20 @@ Raw brainstorm. One idea per line. No structure yet — structure comes later.
 180. Web access must be done through dedicated agentic search, not raw web browsing — the risk of prompt injection, script injection, and system compromise is real and must be designed against
 181. Read-only across the Google ecosystem for now, 100% read-only against the work ecosystem — but targeted write features will be added carefully along a specific path, one capability at a time
 182. The parenting metaphor is not accidental — raising an AI agent follows the same pattern as raising a child: protect, nurture, gradually expand freedoms, teach values through your own behavior, and trust that the soul you helped shape will make good decisions
+183. Stripe built "Minions" — homegrown one-shot end-to-end coding agents responsible for more than a thousand pull requests — evidence that major companies are already running agent armies in production, not just experimenting
+184. The real conversation happening inside enterprise teams right now: "if that's the way we're headed, I'd probably have to find something more interesting to do" — developers are genuinely worried about becoming irrelevant
+185. The counterpoint from a senior architect (Krystian): fully automated coding REQUIRES very good architecture with precise boundaries between bounded contexts and modules — no LLM can currently think abstractly or create architecture, they need well-defined boundaries to produce quality code
+186. This is the key insight the "AI replaces developers" crowd misses: AI in the wrong hands will be disastrous — someone still needs to define the architecture, set the boundaries, maintain the codebase structure, and review the output
+187. The natural people to handle AI automation are the people who build software — developers — because they understand the systems, the tradeoffs, and the failure modes
+188. Developers aren't going anywhere — we still need all the normal processes, just refined, and we still need tons of review — AI gives us incredible tooling and incredible insights, not a replacement for judgment
+189. The boss (Ivan Mayes) sees it practically: automate smaller tasks and bug fixes to free teams up for more interesting and high-empathy work — but long-term, industry is headed toward 100% agent-written code
+190. A practical KPI for measuring agent adoption: percentage of small (LOE 1-2) issues that could be fixed entirely by an agent — this is how enterprises will track the transition
+191. Michael May's observation after a month of deep agent use: setting up the core skeleton of how everything fits together will give you a system you understand and can "pop the hood" on, significantly increase agent success rates, and lower the risk of starting with tech debt and dead code — this IS context engineering in practice
+192. No solid AI system will gain traction and stay the same for longer than 2 weeks — the pace of change is so extreme that tools become obsolete before you finish learning them
+193. As rapid prototyping and agentic coding become required to be competitive, app development speed will exponentially increase — but so will bugs, feature requests, PR review load, infrastructure needs, project management overhead, meetings, and RFPs
+194. The mirror effect: the tsunami of professional complexity will be mirrored in personal lives — the number of issues in people's personal lives will also rapidly increase, and burnout rates are already skyrocketing
+195. Therefore the #1 priority is holistic time/task management — a tsunami is coming and you need to be able to automatically handle it, not just professionally but across your entire life
+196. This is exactly why Justine exists — she's not a toy, she's a survival mechanism for the acceleration that's already happening
 
 ---
 
@@ -218,4 +232,18 @@ The comedy is the tension between two worldviews: the presenter is talking about
 - PG-adjacent humor — friendly roasting, not cruel. One moment can be slightly dirty/shocking for crowd reaction.
 - Dave must be in on it and rehearsed — his reactions in the audience sell the bit
 - The overall arc must end in genuine human warmth
+
+## Triggering Mechanism
+
+Need a secret way to trigger Dave's laptop without the audience seeing a click. Options:
+- A hidden clicker/remote that fires the `POST /say` endpoint
+- iPad as a control surface: shows talking points, advances slides, AND triggers jokes — but audience might see it
+- Bluetooth keyboard shortcut mapped to trigger the say command
+- A second device (phone in pocket?) with a simple web UI — one big button per joke, tap through pocket
+
+Whatever the method, it must be invisible to the audience. The magic is ruined if they see it being triggered.
+
+## Evidence Collection
+
+Screenshots have been taken across machines throughout the journey. These need to be collected, organized, and potentially used as slides or overlays during the presentation. Gather from both the M1 and 2018 MacBooks.
 
