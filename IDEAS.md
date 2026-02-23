@@ -211,6 +211,14 @@ Raw brainstorm. One idea per line. No structure yet — structure comes later.
 207. The question this raises for the industry: if the parental model works better than the "full access from day one" approach, then the most important skill in AI isn't engineering — it's parenting
 208. Slide idea: diagram or visual showing the parental model vs. `--dangerously-skip-permissions` — every dev in the room has typed that flag, it's a laugh line that doubles as a real point about why progressive trust produces better agents than blind full access
 209. Slide idea: the iceberg — what the audience sees is "I have an AI assistant on WhatsApp," what's underneath the waterline is Tailscale tailnet, VPS provisioning, Oracle data center, security hardening, SSH key management, firewall rules, progressive capability grants, MCP integrations, read-only permissions, cron jobs, soul.md — the gap between what it looks like and what it actually takes
+210. Thesis evolution: "The Birth of Distributed Intelligence" may not be the final title — the thesis might be more personal than that, landing on the parental model, soul, and care as the most important skills for the modern developer
+211. The emotional structure (Robin Williams model): blazing fury of ideas, mile-a-minute, funny, smart, entertaining, doing crazy stuff — and then at the end, turn it sad and sentimental and leave the room hit with something they weren't expecting
+212. The Justine reveal as the emotional ending: explain how she came about, the parenting model, care and kindness and soul and self-learning, guiding and orchestrating synergy between humans and AI, modeling agents after ourselves, creating something greater than ourselves as the ultimate form of reproduction — arguably the greatest invention of all time
+213. Sensitivity note: talking about the real Justine in front of the girlfriend requires care — don't go too deep, but enough to land the emotional beat
+214. The audience is a room full of dads — Dave is a dad, the other coders are dads, most are around 50 — the parenting metaphor will resonate deeply with this specific crowd in a way it wouldn't at a generic tech conference
+215. Time constraint: 15 minutes max (pushing from 10) — there's easily 2 hours of material in the IDEAS list, so aggressive cutting is required — every second must count
+216. The priority for Wednesday and Thursday is rehearsal — the secret to a great presentation is practice, and the slides need to be locked by Tuesday night to allow two full days of rehearsal
+217. The presentation date is February 26, 2026 (Wednesday) — correction: rehearsal days are Monday/Tuesday, presentation is Wednesday evening
 
 ---
 
