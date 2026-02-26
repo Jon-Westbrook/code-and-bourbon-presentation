@@ -1,34 +1,89 @@
 # Presentation Outline
 
-6 slides total. Intro and closing are locked. Three middle slides need content + images.
+18 slides total. Intro and closing are locked. 16 content slides driven by images.
 
 ## Slide 1 — INTRO (locked)
 - Lakhani quote: "Humans with AI will replace humans without AI"
 - Title: The Birth of Distributed Intelligence
 - Theme: violet frame
 
-## Slide 2 — SECTION A (cyan)
-- TBD — waiting for images and talking points
-- One image background or dominant visual
-- Brief overlay text, mostly spoken
+## SECTION 1 — cyan (4 slides)
 
-## Slide 3 — SECTION B (amber)
-- TBD — waiting for images and talking points
-- One image background or dominant visual
-- Brief overlay text, mostly spoken
+### Slide 2 — 01a: The 8 Stages
+- Image: Steve Yegge's 8 Stages of Dev-evolution to AI
+- Talking points: TBD
 
-## Slide 4 — SECTION C (magenta)
-- TBD — waiting for images and talking points
-- One image background or dominant visual
-- Brief overlay text, mostly spoken
+### Slide 3 — 01b: The Curve
+- Image: Curve of agentic programming
+- Talking points: TBD
 
-## Slide 5 — CONCLUSION (locked)
+### Slide 4 — 01c: Gustavo
+- Images: Dudamel conducting gif + Gustavo repo screenshot
+- Talking points: TBD
+
+### Slide 5 — 01e: Opus 4.6
+- Image: Claude Opus 4.6 sub-agents
+- Talking points: TBD
+
+## SECTION 2 — amber (10 slides)
+
+### Slide 6 — 02a: Clawdbot
+- Image: Clawdbot screenshot
+- Talking points: TBD
+
+### Slide 7 — 02b: OpenClaw
+- Images: Two OpenClaw screenshots
+- Talking points: TBD
+
+### Slide 8 — 02c: Oracle Cloud
+- Image: Oracle Cloud free tier
+- Talking points: TBD
+
+### Slide 9 — 02d: Model Routing
+- Image: Complex model routing
+- Talking points: TBD
+
+### Slide 10 — 02e: Google Cloud
+- Image: Google Cloud
+- Talking points: TBD
+
+### Slide 11 — 02f: Justine Is Alive
+- Images: "Justine is alive" + "I just came online"
+- Talking points: TBD
+
+### Slide 12 — 02g: Justine on Slack
+- Images: Two Justine Slack conversations
+- Talking points: TBD
+
+### Slide 13 — 02i: Daily Briefing
+- Image: Justine daily briefing
+- Talking points: TBD
+
+### Slide 14 — 02j: To-Do Management
+- Images: Two Justine to-do screenshots
+- Talking points: TBD
+
+### Slide 15 — 02k: Autonomous Behavior
+- Image: Autonomous behavior screenshot
+- Talking points: TBD
+
+## SECTION 3 — magenta (2 slides)
+
+### Slide 16 — 03a: Living Files
+- Images: Living files Justine + living files theory
+- Talking points: TBD
+
+### Slide 17 — 03b: Something Big Is Happening
+- Image: Something Big Is Happening
+- Talking points: TBD
+
+## Slide 18 — CONCLUSION (locked)
 - "The divide took a massive jump this month"
 - "Developers drive the ship"
 - "Vibe coding is dangerously dismissive"
 - Theme: violet frame
 
-## Slide 6 — ROAST + CHRONOGRAPH (locked)
+## Slide 19 — ROAST + CHRONOGRAPH (locked)
 - "This presentation was invented, written, designed, and built by AI. Jon did nothing."
 - Timer: 11d 23h 56m 00s (Feb 14 10:03 AM → Feb 26 9:59 AM)
 - "This presentation was a public service ensuring that Dave never asks me to do a presentation again."

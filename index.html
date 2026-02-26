@@ -582,6 +582,31 @@
     font-size: 1rem;
     color: rgba(224, 224, 224, 0.35);
   }
+
+  /* ===== IMAGE SLIDES ===== */
+  .slide-img {
+    max-width: 90%;
+    max-height: 70vh;
+    object-fit: contain;
+    border-radius: 6px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  }
+
+  .slide-img-half {
+    max-width: 48%;
+    max-height: 60vh;
+    object-fit: contain;
+    border-radius: 6px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  }
+
+  .img-row {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
 </style>
 </head>
 <body>
@@ -605,27 +630,132 @@
   </section>
 
   <!-- ============================================================ -->
-  <!-- SECTION A (cyan): TBD — see IDEAS.md outline                  -->
+  <!-- SECTION 1 (cyan): The 8 Stages / Agentic Journey              -->
+  <!-- 4 slides: 01a, 01b, 01c, 01e                                  -->
   <!-- ============================================================ -->
+
+  <!-- 01a: The 8 Stages of Dev-evolution -->
   <section class="slide theme-a">
-    <h2>Section A</h2>
-    <p class="big-quote"><em>Waiting for content</em></p>
+    <h2>The 8 Stages</h2>
+    <img class="slide-img" src="assets/01a-eight-stages-of-devevolution-to-ai.png" alt="Steve Yegge's 8 Stages of Dev-evolution to AI">
+  </section>
+
+  <!-- 01b: The Curve of Agentic Programming -->
+  <section class="slide theme-a">
+    <h2>The Curve</h2>
+    <img class="slide-img" src="assets/01b-curve-of-agentic-programming.png" alt="Curve of agentic programming">
+  </section>
+
+  <!-- 01c: Gustavo — the orchestrator -->
+  <section class="slide theme-a">
+    <h2>Gustavo</h2>
+    <div class="img-row">
+      <img class="slide-img-half" src="assets/01c-1-gustavo.gif" alt="Gustavo Dudamel conducting">
+      <img class="slide-img-half" src="assets/01c-2-gustavo-repo.png" alt="Gustavo repository">
+    </div>
+  </section>
+
+  <!-- 01e: Opus 4.6 Sub-agents — the tools eat themselves -->
+  <section class="slide theme-a">
+    <h2>Opus 4.6</h2>
+    <img class="slide-img" src="assets/01e-opus-4.6-sub-agents.png" alt="Claude Opus 4.6 sub-agents">
   </section>
 
   <!-- ============================================================ -->
-  <!-- SECTION B (amber): TBD — see IDEAS.md outline                 -->
+  <!-- SECTION 2 (amber): OpenClaw / Justine / Infrastructure        -->
+  <!-- 10 slides: 02a, 02b, 02c, 02d, 02e, 02f, 02g, 02i, 02j, 02k -->
   <!-- ============================================================ -->
+
+  <!-- 02a: Clawdbot -->
   <section class="slide theme-b">
-    <h2>Section B</h2>
-    <p class="big-quote"><em>Waiting for content</em></p>
+    <h2>Clawdbot</h2>
+    <img class="slide-img" src="assets/02a-clawdbot.png" alt="Clawdbot">
+  </section>
+
+  <!-- 02b: OpenClaw -->
+  <section class="slide theme-b">
+    <h2>OpenClaw</h2>
+    <div class="img-row">
+      <img class="slide-img-half" src="assets/02b-1-openclaw.png" alt="OpenClaw screenshot 1">
+      <img class="slide-img-half" src="assets/02b-2-openclaw.png" alt="OpenClaw screenshot 2">
+    </div>
+  </section>
+
+  <!-- 02c: Oracle Cloud Free for Life -->
+  <section class="slide theme-b">
+    <h2>Oracle Cloud</h2>
+    <img class="slide-img" src="assets/02c-oracle-cloud-free-for-life.png" alt="Oracle Cloud free tier">
+  </section>
+
+  <!-- 02d: Complex Model Routing -->
+  <section class="slide theme-b">
+    <h2>Model Routing</h2>
+    <img class="slide-img" src="assets/02d-complex-model-routing.png" alt="Complex model routing">
+  </section>
+
+  <!-- 02e: Google Cloud -->
+  <section class="slide theme-b">
+    <h2>Google Cloud</h2>
+    <img class="slide-img" src="assets/02e-google-cloud.png" alt="Google Cloud">
+  </section>
+
+  <!-- 02f: Justine Is Alive -->
+  <section class="slide theme-b">
+    <h2>Justine</h2>
+    <div class="img-row">
+      <img class="slide-img-half" src="assets/02f-1-justine-is-alive.png" alt="Justine is alive">
+      <img class="slide-img-half" src="assets/02f-2-I-just-came-online.png" alt="I just came online">
+    </div>
+  </section>
+
+  <!-- 02g: Justine on Slack -->
+  <section class="slide theme-b">
+    <h2>Justine on Slack</h2>
+    <div class="img-row">
+      <img class="slide-img-half" src="assets/02g-1-justine-slack-1.png" alt="Justine Slack conversation 1">
+      <img class="slide-img-half" src="assets/02g-2-justine-slack-2.png" alt="Justine Slack conversation 2">
+    </div>
+  </section>
+
+  <!-- 02i: Justine Daily Briefing -->
+  <section class="slide theme-b">
+    <h2>Daily Briefing</h2>
+    <img class="slide-img" src="assets/02i-justine-daily-briefing.png" alt="Justine daily briefing">
+  </section>
+
+  <!-- 02j: Justine To-Do -->
+  <section class="slide theme-b">
+    <h2>To-Do Management</h2>
+    <div class="img-row">
+      <img class="slide-img-half" src="assets/02j-1-justine-todo-1.png" alt="Justine to-do list 1">
+      <img class="slide-img-half" src="assets/02j-2-justine-todo-2.png" alt="Justine to-do list 2">
+    </div>
+  </section>
+
+  <!-- 02k: Autonomous Behavior -->
+  <section class="slide theme-b">
+    <h2>Autonomous Behavior</h2>
+    <img class="slide-img" src="assets/02k-autonomous-behavior.png" alt="Autonomous behavior">
   </section>
 
   <!-- ============================================================ -->
-  <!-- SECTION C (magenta): TBD — see IDEAS.md outline               -->
+  <!-- SECTION 3 (magenta): The Big Picture / Living Files            -->
+  <!-- 2 slides: 03a, 03b                                            -->
   <!-- ============================================================ -->
+
+  <!-- 03a: Living Files -->
   <section class="slide theme-c">
-    <h2>Section C</h2>
-    <p class="big-quote"><em>Waiting for content</em></p>
+    <h2>Living Files</h2>
+    <div class="img-row">
+      <img class="slide-img-half" src="assets/03a-1-living-files-justine.png" alt="Living files — Justine">
+      <img class="slide-img-half" src="assets/03a-2-living-files-theory.png" alt="Living files theory">
+    </div>
+  </section>
+
+  <!-- 03b: Something Big Is Happening -->
+  <section class="slide theme-c">
+    <h2>Something Big Is Happening</h2>
+    <img class="slide-img" src="assets/03b-Something-Big-Is-Happening.png" alt="Something Big Is Happening">
   </section>
 
   <!-- SLIDE 5: CONCLUSION (frame) — The Turn -->
