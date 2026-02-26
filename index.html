@@ -826,7 +826,62 @@
     <div class="links" style="margin-top: 1rem;">
       <a href="https://github.com/Jon-Westbrook" target="_blank">github.com/Jon-Westbrook</a>
     </div>
-    <p class="built-with">Built with zero dependencies. No frameworks. No slides app. Just HTML.</p>
+  </section>
+
+  <!-- SLIDE 12: THE ROAST + CHRONOGRAPH — stays on screen -->
+  <section class="slide theme-frame">
+    <p style="font-size: 1.8rem; color: rgba(224,224,224,0.5); margin-bottom: 1.5rem; letter-spacing: 0.05em;">
+      DISCLOSURE
+    </p>
+    <p style="font-size: 2.4rem; color: var(--text); margin-bottom: 0.5rem; line-height: 1.4;">
+      This entire presentation was<br>
+      <span style="color: var(--cyan); text-shadow: 0 0 10px rgba(0,240,255,0.5);">invented, written, designed,</span><br>
+      <span style="color: var(--cyan); text-shadow: 0 0 10px rgba(0,240,255,0.5);">and built by AI.</span>
+    </p>
+    <p style="font-size: 2rem; color: var(--amber); text-shadow: 0 0 8px rgba(255,170,0,0.4); margin-bottom: 0.3rem;">
+      Jon did nothing.
+    </p>
+    <p style="font-size: 1.6rem; color: var(--magenta); text-shadow: 0 0 6px rgba(255,0,255,0.3); margin-bottom: 2.5rem;">
+      He is actually a robot. Go poke him.
+    </p>
+
+    <div class="title-decoration" style="margin: 0 auto 2rem;"></div>
+
+    <!-- Chronograph -->
+    <p style="font-size: 1rem; color: rgba(224,224,224,0.3); margin-bottom: 0.5rem; letter-spacing: 0.1em;">
+      TIME FROM "I'M STARTING A TIMER" TO "I'M USING OPENCLAW"
+    </p>
+    <p style="font-size: 0.9rem; color: rgba(224,224,224,0.2); margin-bottom: 1rem;">
+      Feb 14 10:03 AM → Feb 26 9:59 AM
+    </p>
+    <div id="chrono" style="
+      display: inline-flex;
+      gap: 0.4rem;
+      font-family: 'Courier New', monospace;
+      font-size: 4.5rem;
+      font-weight: 700;
+      color: var(--cyan);
+      text-shadow: 0 0 15px rgba(0,240,255,0.6), 0 0 40px rgba(0,240,255,0.2);
+      letter-spacing: 0.04em;
+      padding: 1rem 2rem;
+      border: 2px solid rgba(0,240,255,0.2);
+      border-radius: 8px;
+      background: rgba(0,240,255,0.03);
+      box-shadow: 0 0 20px rgba(0,240,255,0.08);
+    ">
+      <span id="chrono-d">11</span><span style="color: rgba(224,224,224,0.3); font-size: 2rem; align-self: flex-end; margin-bottom: 0.6rem;">d</span>
+      <span id="chrono-h">23</span><span style="color: rgba(224,224,224,0.3); font-size: 2rem; align-self: flex-end; margin-bottom: 0.6rem;">h</span>
+      <span id="chrono-m">56</span><span style="color: rgba(224,224,224,0.3); font-size: 2rem; align-self: flex-end; margin-bottom: 0.6rem;">m</span>
+      <span id="chrono-s">00</span><span style="color: rgba(224,224,224,0.3); font-size: 2rem; align-self: flex-end; margin-bottom: 0.6rem;">s</span>
+      <span style="color: rgba(0,240,255,0.4); font-size: 2.5rem; align-self: flex-end; margin-bottom: 0.4rem;">.</span>
+      <span id="chrono-ms" style="font-size: 2.5rem; color: rgba(0,240,255,0.5); align-self: flex-end; margin-bottom: 0.4rem;">00</span>
+    </div>
+    <p style="font-size: 1rem; color: rgba(224,224,224,0.15); margin-top: 1.5rem;">
+      I told you so, Dave.
+    </p>
+    <p style="font-size: 1rem; color: rgba(224,224,224,0.12); margin-top: 2rem; font-style: italic; letter-spacing: 0.03em;">
+      This presentation was a public service ensuring that Dave never asks me to do a presentation again.
+    </p>
   </section>
 
 </div>
@@ -988,6 +1043,80 @@
   // ===== INIT =====
   updateCounter();
   triggerDave(slides[current]);
+
+  // ===== CHRONOGRAPH =====
+  // Target: 11d 23h 56m 00s .00
+  // Total seconds: 1036560
+  var CHRONO_TARGET = { d: 11, h: 23, m: 56, s: 0 };
+  var chronoRunning = false;
+  var chronoRafId = null;
+  var chronoStartTime = 0;
+  var RAMP_DURATION = 3000; // ms to "count up" to final value
+
+  var elD = document.getElementById('chrono-d');
+  var elH = document.getElementById('chrono-h');
+  var elM = document.getElementById('chrono-m');
+  var elS = document.getElementById('chrono-s');
+  var elMs = document.getElementById('chrono-ms');
+
+  function pad2(n) { return n < 10 ? '0' + n : '' + n; }
+
+  function chronoTick(now) {
+    if (!chronoRunning) return;
+    var elapsed = now - chronoStartTime;
+    var t = Math.min(elapsed / RAMP_DURATION, 1);
+    // Ease out cubic
+    var ease = 1 - Math.pow(1 - t, 3);
+
+    var totalTarget = ((CHRONO_TARGET.d * 24 + CHRONO_TARGET.h) * 60 + CHRONO_TARGET.m) * 60 + CHRONO_TARGET.s;
+    var currentTotal = Math.floor(totalTarget * ease);
+
+    var days = Math.floor(currentTotal / 86400);
+    var hours = Math.floor((currentTotal % 86400) / 3600);
+    var mins = Math.floor((currentTotal % 3600) / 60);
+    var secs = currentTotal % 60;
+
+    elD.textContent = pad2(days);
+    elH.textContent = pad2(hours);
+    elM.textContent = pad2(mins);
+    elS.textContent = pad2(secs);
+    // Milliseconds always spin
+    elMs.textContent = pad2(Math.floor(Math.random() * 100));
+
+    chronoRafId = requestAnimationFrame(chronoTick);
+  }
+
+  function startChrono() {
+    if (chronoRunning) return;
+    chronoRunning = true;
+    chronoStartTime = performance.now();
+    chronoRafId = requestAnimationFrame(chronoTick);
+  }
+
+  function stopChrono() {
+    chronoRunning = false;
+    if (chronoRafId) cancelAnimationFrame(chronoRafId);
+  }
+
+  // Watch for the chrono slide becoming active
+  var chronoSlideIndex = -1;
+  for (var ci = 0; ci < slides.length; ci++) {
+    if (slides[ci].querySelector('#chrono')) {
+      chronoSlideIndex = ci;
+      break;
+    }
+  }
+
+  // Patch goTo to trigger chrono
+  var _origGoTo = goTo;
+  goTo = function (index, direction) {
+    _origGoTo(index, direction);
+    if (index === chronoSlideIndex) {
+      startChrono();
+    } else {
+      stopChrono();
+    }
+  };
 
 })();
 </script>
