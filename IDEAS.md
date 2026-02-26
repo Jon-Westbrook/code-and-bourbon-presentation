@@ -1,3 +1,40 @@
+# Presentation Outline
+
+6 slides total. Intro and closing are locked. Three middle slides need content + images.
+
+## Slide 1 — INTRO (locked)
+- Lakhani quote: "Humans with AI will replace humans without AI"
+- Title: The Birth of Distributed Intelligence
+- Theme: violet frame
+
+## Slide 2 — SECTION A (cyan)
+- TBD — waiting for images and talking points
+- One image background or dominant visual
+- Brief overlay text, mostly spoken
+
+## Slide 3 — SECTION B (amber)
+- TBD — waiting for images and talking points
+- One image background or dominant visual
+- Brief overlay text, mostly spoken
+
+## Slide 4 — SECTION C (magenta)
+- TBD — waiting for images and talking points
+- One image background or dominant visual
+- Brief overlay text, mostly spoken
+
+## Slide 5 — CONCLUSION (locked)
+- "The divide took a massive jump this month"
+- "Developers drive the ship"
+- "Vibe coding is dangerously dismissive"
+- Theme: violet frame
+
+## Slide 6 — ROAST + CHRONOGRAPH (locked)
+- "This presentation was invented, written, designed, and built by AI. Jon did nothing."
+- Timer: 11d 23h 56m 00s (Feb 14 10:03 AM → Feb 26 9:59 AM)
+- "This presentation was a public service ensuring that Dave never asks me to do a presentation again."
+
+---
+
 # Ideas
 
 Raw brainstorm. One idea per line. No structure yet — structure comes later.
