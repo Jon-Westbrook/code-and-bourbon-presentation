@@ -42,7 +42,7 @@ async function handleSay(req, res) {
   }
 
   const text = sanitize(String(body.text || ""));
-  const voice = sanitize(String(body.voice || "Fred"));
+  const voice = sanitize(String(body.voice || "Samantha"));
   if (!text) {
     res.writeHead(400, { "Content-Type": "application/json" });
     return res.end(JSON.stringify({ ok: false, error: "Missing text" }));
