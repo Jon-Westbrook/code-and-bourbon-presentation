@@ -1254,6 +1254,27 @@
     }
   });
 
+  // ===== TOUCH SWIPE =====
+  (function () {
+    var startX = 0, startY = 0;
+    var threshold = 50; // minimum px to count as a swipe
+
+    document.addEventListener('touchstart', function (e) {
+      startX = e.changedTouches[0].clientX;
+      startY = e.changedTouches[0].clientY;
+    }, { passive: true });
+
+    document.addEventListener('touchend', function (e) {
+      var dx = e.changedTouches[0].clientX - startX;
+      var dy = e.changedTouches[0].clientY - startY;
+      // Only trigger if horizontal movement exceeds vertical (not a scroll)
+      if (Math.abs(dx) > threshold && Math.abs(dx) > Math.abs(dy)) {
+        if (dx < 0) nextSlide();  // swipe left = next
+        else prevSlide();          // swipe right = prev
+      }
+    }, { passive: true });
+  })();
+
   // ===== INIT =====
   updateCounter();
   triggerDave(slides[current]);
@@ -1351,11 +1372,19 @@
     overlay.style.cssText = 'position:fixed;inset:0;z-index:10000;background:rgba(0,0,0,0.85);display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity 0.3s ease;';
 
     var box = document.createElement('div');
-    box.style.cssText = 'background:rgba(20,20,35,0.95);border:1px solid rgba(0,240,255,0.2);border-radius:12px;padding:2.5rem 3rem;text-align:center;max-width:420px;color:#e0e0e0;font-family:inherit;box-shadow:0 0 40px rgba(0,240,255,0.1);';
-    box.innerHTML = '<p style="font-size:1.4rem;font-weight:700;color:#00f0ff;margin-bottom:1.2rem;text-shadow:0 0 10px rgba(0,240,255,0.4);">Navigation</p>' +
-      '<p style="font-size:1.1rem;line-height:1.6;margin-bottom:0.6rem;"><span style="color:#00f0ff;">\u2190 \u2192</span> &nbsp; Arrow keys to navigate</p>' +
-      '<p style="font-size:1.1rem;line-height:1.6;margin-bottom:1.5rem;"><span style="color:#00f0ff;">F</span> &nbsp; Toggle fullscreen</p>' +
-      '<p style="font-size:0.8rem;color:rgba(224,224,224,0.35);letter-spacing:0.04em;">Press any key, tap, or click to dismiss</p>';
+    box.style.cssText = 'background:rgba(20,20,35,0.95);border:1px solid rgba(0,240,255,0.2);border-radius:12px;padding:28px 36px;text-align:center;max-width:340px;width:90%;color:#e0e0e0;font-family:inherit;box-shadow:0 0 40px rgba(0,240,255,0.1);';
+
+    var isMobile = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+    var navLine = isMobile
+      ? '<p style="font-size:16px;line-height:1.5;margin:0 0 6px;"><span style="color:#00f0ff;">Swipe \u2190 \u2192</span> &nbsp; to navigate</p>'
+      : '<p style="font-size:16px;line-height:1.5;margin:0 0 6px;"><span style="color:#00f0ff;">\u2190 \u2192</span> &nbsp; Arrow keys to navigate</p>';
+    var fullscreenLine = isMobile ? '' : '<p style="font-size:16px;line-height:1.5;margin:0 0 16px;"><span style="color:#00f0ff;">F</span> &nbsp; Toggle fullscreen</p>';
+    var dismissLine = isMobile
+      ? '<p style="font-size:12px;color:rgba(224,224,224,0.35);letter-spacing:0.04em;margin:0;">Tap to dismiss</p>'
+      : '<p style="font-size:12px;color:rgba(224,224,224,0.35);letter-spacing:0.04em;margin:0;">Press any key or click to dismiss</p>';
+
+    box.innerHTML = '<p style="font-size:20px;font-weight:700;color:#00f0ff;margin:0 0 14px;text-shadow:0 0 10px rgba(0,240,255,0.4);">Navigation</p>' +
+      navLine + fullscreenLine + dismissLine;
 
     overlay.appendChild(box);
     document.body.appendChild(overlay);
