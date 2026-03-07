@@ -1624,7 +1624,7 @@
       setTimeout(function () {
         if (overlay.parentNode) overlay.parentNode.removeChild(overlay);
       }, 300);
-      document.removeEventListener('keydown', dismissOnKey);
+      document.removeEventListener('keydown', dismissOnKey, true);
       overlay.removeEventListener('click', dismiss);
     }
 
